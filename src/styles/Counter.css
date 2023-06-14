@@ -1,0 +1,35 @@
+.counterImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ConatinerDiv {
+  border-radius: 15px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(202, 195, 195);
+  height: 250px;
+  width: 240px;
+}
+
+
+.buttonMy{
+    color: blueviolet;
+    background: none;
+    border: 0;
+}
+
+.changecolor{
+    width: 10%;
+    height: auto;
+    background-color: green;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
