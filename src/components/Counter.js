@@ -5,16 +5,16 @@ import A from "./A";
 function Counter() {
   const [style , setStyle] = useState({})
   const [count, setCount] = useState(0);
+  const [backgroundColor, setBackgroundColor] = useState('red');
 
 
-  const changeColor = () => {
-    setStyle({
-        backgroundColor: "orange",
-        width: "60%",
-        height: " 60%",
-        borderRadius: "50%",
-    })
-  }
+  const changeColor  = () => {
+    const colors = ['red', 'blue', 'green', 'yellow', 'orange'];
+    const currentIndex = colors.indexOf(backgroundColor);
+    const newIndex = (currentIndex + 1) % colors.length;
+    setBackgroundColor(colors[newIndex]);
+  };
+
 
   const increment = () => {
    
@@ -27,7 +27,13 @@ function Counter() {
   return (
     <div>
       <center>
-        <div className="ConatinerDiv">
+        <div style={{
+          width: '200px',
+          height: '200px',
+          borderRadius: '50%',
+          backgroundColor: backgroundColor,
+          marginBottom: '10px',
+        }}>
           <h2 className="counterImage" style={style}> {count}</h2>
           <button  onClick={increment} className="buttonMy">
             Click Here to increase counter
